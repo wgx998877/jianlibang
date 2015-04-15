@@ -15,23 +15,49 @@ div.align-center{
 	text-align: center;
 }
 .domain{
+	line-height: 60px;
+	height: 60px;
 	display: block;
 	margin-left: 30%;
 }
 .domain input{
-	height: 100%;
+	line-height: 60px;
+	height: 60px;
 	font-size: 30px;
-	width: 20%;
-	display: inline;
+	width: 21%;
+	display: inline-block;
 }
-.domain span{
+div .dfixed{
+	line-height: 60px;
+	display: inline-block;
 	font-size: 30px;
-	border: 2px green;
+	border: 2px dashed green;
 }
 .btn-start{
-	margin-top: 0px;
-	margin-right: 10px;
-	height: 100%;
+	line-height: 60px;
 	font-size: 30px;
-	display: inline;
+	display: inline-block;
+}
+.header{
+	height: 70px;
+	background-color: #1ABC9C;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+}
+.row{
+	padding-top: 71px;
+}
+.layou{
+	line-height: 0px;
+	padding-left: 20px;
+}
+.container{
+	margin-left: 2%;
+	margin-right: 2%;
+	width: 100%;
+}
+.col-md-8{
+	width: 82%;
 }

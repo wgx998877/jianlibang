@@ -1,28 +1,208 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>Bootstrap 101 Template</title>
+<html lang="zh">
+    <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>编辑简历</title>
+    <!-- Loading Bootstrap -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Loading Flat UI -->
+    <link href="static/css/flat-ui.min.css" rel="stylesheet" />
+    <!-- Local CSS -->
+    <link href="static/css/style.css" rel="stylesheet" />
+    <link href="static/css/jquery-ui.css" rel="stylesheet" />
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <h1>你好，世界！</h1>
+    <link rel="shortcut icon" href="static/img/favicon.ico" />
+    <link href="static/css/editormd.css" rel="stylesheet" />
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+    </head>
+    <body>
+
+    <div class="header">
+    </div>
+        <div class="container">
+          <div class="row">
+        <div class="col-md-2">
+          <h5>设置</h5>
+          <label class="checkbox" for="checkbox1"><span class="icon"></span><span class="icon-to-fade"></span>
+            <input type="checkbox" value="" id="checkbox1">
+            Unchecked
+          </label>
+          <label class="checkbox checked" for="checkbox2"><span class="icon"></span><span class="icon-to-fade"></span>
+            <input type="checkbox" checked="checked" value="" id="checkbox2">
+            Checked
+          </label>
+
+          <div class="select2-container form-control select select-primary" id="s2id_autogen1">
+            
+          <h3 class="demo-panel-title">Select</h3>
+          <select class="form-control select select-primary" data-toggle="select">
+            <option value="0">Choose hero</option>
+            <option value="1">Spider Man</option>
+            <option value="2">Wolverine</option>
+            <option value="3">Captain America</option>
+            <option value="4" selected>X-Men</option>
+            <option value="5">Crocodile</option>
+          </select>
+        </div>
+
+        </div>
+
+        <div class="col-md-8">
+        <div class="layout">
+            <div id="test-editormd">
+<textarea style="display:none;">
+#**<center>王小虎</center>**
+
+
+![](http://c.hiphotos.baidu.com/image/pic/item/0e2442a7d933c89573e3eb63d31373f08202000c.jpg)
+
+![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
+
+##个人信息
+年龄：20    性别：男
+
+##联系方式
+
+电话：13000000000 邮箱：example@ex.com
+
+##求职意向
+全职 数据分析师
+
+##教育背景
+
+- 2010.9.1 - 2012.6.30 北京大学统计学院，经济学硕士
+- 2006.9.1 - 2010.6.30 清华大学统计学院，金融学
+
+##工作经历
+
+- 2013.6.1 - 2013.12.30 中金国际金融部
+
+##获得奖励
+
+- 2013年北京市十佳优秀青年
+
+##个人技能
+
+- C++核心变成
+
+##发表成果
+
+- 基于SVM自动分词系统
+
+##示例
+
+
+###图片 Images
+
+Image:
+
+![](https://pandao.github.io/editor.md/examples/images/4.jpg)
+
+> Follow your heart.
+
+![](https://pandao.github.io/editor.md/examples/images/8.jpg)
+
+> 图为：厦门白城沙滩
+
+图片加链接 (Image + Link)：
+
+[![](https://pandao.github.io/editor.md/examples/images/7.jpg)](https://pandao.github.io/editor.md/examples/images/7.jpg "李健首张专辑《似水流年》封面")
+
+> 图为：李健首张专辑《似水流年》封面
+                
+----
+
+
+####特殊符号 HTML Entities Codes
+
+&copy; &  &uml; &trade; &iexcl; &pound;
+&amp; &lt; &gt; &yen; &euro; &reg; &plusmn; &para; &sect; &brvbar; &macr; &laquo; &middot; 
+
+X&sup2; Y&sup3; &frac34; &frac14;  &times;  &divide;   &raquo;
+
+18&ordm;C  &quot;  &apos;
+
+###Emoji表情 :smiley:
+
+> Blockquotes :star:
+
+
+####反斜杠 Escape
+
+\*literal asterisks\*
+            
+###科学公式 TeX(KaTeX)
+                 
+                    
+$$E=mc^2$$
+
+行内的公式$$E=mc^2$$行内的公式，行内的$$E=mc^2$$公式。
+
+$$\(\sqrt{3x-1}+(1+x)^2\)$$
+                    
+$$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
+                
+###绘制流程图 Flowchart
+
+```flow
+st=>start: 用户登陆
+op=>operation: 登陆操作
+cond=>condition: 登陆成功 Yes or No?
+e=>end: 进入后台
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
+                    
+###绘制序列图 Sequence Diagram
+                    
+```seq
+Andrew->China: Says Hello 
+Note right of China: China thinks\nabout it 
+China-->Andrew: How are you? 
+Andrew->>China: I am good thanks!
+```
+
+###结束 End
+
+</textarea>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+        <script src="static/js/jquery.min.js"></script>
+        <script src="static/js/bootstrap.min.js"></script>
+
+        <script src="static/js/flat-ui.min.js"></script>
+        <script src="static/js/editormd.js"></script>
+        <script type="text/javascript">
+      var testEditor;
+
+            $(function() {
+                testEditor = editormd("test-editormd", {
+                    width   : "100%",
+                    height  : 800,
+                    path    : "lib/",
+                    tex     : true,
+                    flowchart : true,
+                    htmlDecode : "style,sub,sup",
+                });
+                //testEditor.config("htmlDecode", "center");
+                /*
+                // or
+                testEditor = editormd({
+                    id      : "test-editormd",
+                    width   : "90%",
+                    height  : 640,
+                    path    : "../lib/"
+                });
+                */
+            });
+        </script>
+    </body>
 </html>

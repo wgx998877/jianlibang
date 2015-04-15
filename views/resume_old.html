@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="static/css/flat-ui.min.css" rel="stylesheet">
+    <!-- Local CSS -->
+    <link href="static/css/style.css" rel="stylesheet">
+    <link href="static/css/jquery-ui.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="static/img/favicon.ico">
+
+
+    <link rel="stylesheet" type="text/css" href="static/markitup/skins/markitup/style.css">
+    <link rel="stylesheet" type="text/css" href="static/markitup/sets/default/style.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="header">
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div>
+            <textarea id="markItUp" cols=85 rows=20>
+欢迎来到简历帮，在这里制作你的在线简历
+-----------------------------------
+
+![markItUp! Logo](../markitup/preview/picture.png "markItUp! Logo")
+
+**markItUp!** is a javascript over [jQuery](http://www.jquery.com "jQuery Website") plug-in which allow you to turn any textarea in a markup editor.
+
+**markItUp!** is a lightweight fully customizable engine made to easily fit all developers needs in their CMS, blogs, forums or websites.
+
+_Html, Textile, Wiki Syntax, Markdown, BBcode_ or even your own Markup system can be easily implemented.
+
+- integrate it easily
+- customize buttons and macros to fit all your need
+- customize keyboard shortcuts
+- customize toolbar and css look and feel
+ - skins
+ - icons
+ - dropdown menus
+ - separators
+- use the engine from anywhere in the page
+- implement any markup language even your own
+- implement your own javascript macros even the most advanced
+- allows multi-line edition
+- preview ajax result dynamically in any markup parser
+- offers userfriendly experience and effectiveness
+
+            </textarea>
+          </div>
+        </div>
+        <div class="col-md-8  ">
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/jquery-ui.js"></script>
+
+    <!-- markItUp! -->
+    <script type="text/javascript" src="static/markitup/jquery.markitup.js"></script>
+    <!-- markItUp! toolbar settings -->
+    <script type="text/javascript" src="static/markitup/sets/default/set.js"></script>
+
+<script type="text/javascript">
+$(function() {
+  // Add markItUp! to your textarea in one line
+  // $('textarea').markItUp( { Settings }, { OptionalExtraSettings } );
+  //mySettings.nameSpace = 'markdown';
+  $('#markItUp').markItUp(mySettings);
+
+
+
+  // You can add content from anywhere in your page
+  // $.markItUp( { Settings } );  
+  $('.add').click(function() {
+    $('#markItUp').markItUp('insert',
+      {   openWith:'<opening tag>',
+        closeWith:'<\/closing tag>',
+        placeHolder:"New content"
+      }
+    );
+    return false;
+  });
+  
+  // And you can add/remove markItUp! whenever you want
+  // $(textarea).markItUpRemove();
+  $('.toggle').click(function() {
+    if ($("#markItUp.markItUpEditor").length === 1) {
+      $("#markItUp").markItUp('remove');
+      $("span", this).text("get markItUp! back");
+    } else {
+      $('#markItUp').markItUp(mySettings);
+      $("span", this).text("remove markItUp!");
+    }
+    return false;
+  });
+});
+</script>
+</head>
+  </body>
+</html>
